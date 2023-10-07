@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive.org Data</title>
+</head>
+<body>
+    <h1>Archive.org Data</h1>
+    <form method="POST">
+        <label for="page_start">Start Page Number:</label>
+        <input type="text" name="page_start" required>
+        <br>
+        <label for="page_end">End Page Number:</label>
+    	  <input type="text" name="page_end" required>
+    	  <br>
+        <label for="count">Count:</label>
+        <input type="text" name="count" required>
+        <br>
+        <input type="submit" value="Fetch Data">
+    </form>
+    {% if table %}
+    <h2>Data Table</h2>
+    {{ table | safe }}
+    {% endif %}
+</body>
+</html>
